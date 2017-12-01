@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Random Password</title>
+</head>
+<body>
+	
+	<button  id="gen">click</button>
+	<button id="sv">Save</button>
+	<script>
+	
+
+			function giv(){
+			var alpha = ["a", "b", "c", "d", "e", "f", "g", 
+						"h", "i", "j", "k", "l", "m", "n"];  //14 current size
+			var starters = ["Golf", "Wolf", "Sub", "Impala"]; //4 current size
+			var numb = ["1", "2" , "3", "4", "5"]; //5 current size
+			var specialChar = ["!", "@", "#", "$"]; //4 current size
+			var pass = starters[Math.round(Math.random() * 4)];
+			var sizeOfPassword = 10;
+			for(i = 0; i < sizeOfPassword; i++){
+				pass+= alpha[Math.round(Math.random() * 14)];
+			}
+			for(i = 0; i < 2; i++){
+				pass+=numb[Math.round(Math.random() * 5)]
+			}
+			pass+=specialChar[1];
+			window.alert(pass);	
+			console.log(pass);
+
+		}
+
+		
+    gen.onclick = giv;
+   
+
+	</script>
+
+
+
+</body>
+</html>
